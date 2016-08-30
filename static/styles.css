@@ -1,0 +1,97 @@
+#bottom {
+  color:red;
+}
+
+p {
+  font-family: "Verdana", "Arial";
+  color: #ff6666;
+}
+.primary {
+  color: #34495E;
+  margin: 8px;
+}
+.secondary {
+  color: #ff9090;
+  margin: 8px;
+}
+.descript {
+  color: #ff6666;
+  margin: 6px;
+  font-style: italic; 
+}
+
+a {
+  color: #800000;
+  font-family: "Verdana", "Arial";
+  color: #ff6666;
+}
+.hashlink {
+  color: #860A00;
+  padding: 10px;
+  position: static;
+}
+.menulinks {
+  color: #800000;
+  font-family: "Verdana", "Arial";
+  color: #ff6666;
+  text-transform: uppercase;
+  font-size: small;
+}
+
+h1{
+  color: red;
+  margin: 0px;
+  font-family: "Verdana", "Arial";
+  color: #ff6666;
+}
+.title {
+  text-transform: uppercase;
+  font-size: x-large;
+  color: #ff4d4d;
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-color: black;
+  padding-bottom:5px;
+}
+.names {
+  text-transform: uppercase;
+  font-size: medium;
+  color: #404040;
+  text-align: left;
+  margin-top:5px;
+}
+
+
+body {
+  padding: 10px 10px 10px 10px;
+  background: #FFA600; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #FFBF4C, #FFA600); /* Safari */
+  background: -o-radial-gradient(circle, #FFBF4C, #FFA600); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #FFBF4C, #FFA600); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #FFBF4C, #FFA600); /* Standard syntax */
+}
+.pagebox {
+  position: inherit;
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, white, #e6e6e6); /* Safari */
+  background: -o-radial-gradient(circle, white, #e6e6e6); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, white, #e6e6e6); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, white, #e6e6e6); /* Standard syntax */
+  border-style: solid;
+  border-width: 3px;
+  border-color: #000;
+  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px;
+}
+.menuitems {
+  margin-top:3px;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.menuitems span {
+  display: table-cell;
+  text-align: center;
+}

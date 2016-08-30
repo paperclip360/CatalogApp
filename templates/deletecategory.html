@@ -1,0 +1,20 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename ='styles.css') }}">
+</head>
+<body>
+<div class="pagebox">
+	<div class="header">
+		{%if 'username' not in session %}
+		<a href='/login' class="menulink">Click Here to Login </a>
+		{% else %}
+		<a href='/gdisconnect' class="menulink">Logout </a>
+		{% endif %}
+		<p> Are you sure you want to delete </br>{{item.name}}? </br></br> This will also delete ALL Items in the  {{item.name}} Category!!</p>
+
+		<form action='{{ url_for('deleteCategory',id = item.id)}}' method = 'post'>
+
+		<input type='submit' value='Delete'>
+		</form>
+		<a href= '{{url_for('allCategories')}}'>Cancel</a>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename ='styles.css') }}">
+</head>
+<body>
+<div class="pagebox">
+	<div class="header">
+		{%if 'username' not in session %}
+		<a href='/login' class="menulink">Click Here to Login </a>
+		{% else %}
+		<a href='/gdisconnect' class="menulink">Logout </a>
+		{% endif %}
+		<h1 class="title">All Categories</h1>
+			<div class="menuitems">
+				<a href="/items/"class="menulinks">
+					Click here to view all Items</a>
+				</div>
+			</div>
+		{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<ul>
+			{% for message in messages %}
+				<li> <strong> {{message}} </strong> </li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+	
+	{% for categories in allcategories %}
+	<h1 class="names">{{categories.name}}
+		<a href="{{url_for('categoryItems', category_id = categories.id) }}"
+		class="menulinks">View</a></h1>
+	<p class="descript">{{categories.user.email}}-{{categories.user.name}}<br></br></p>
+
+	{% endfor %}
+	</body>
+</html>

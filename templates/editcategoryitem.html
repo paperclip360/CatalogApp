@@ -1,0 +1,27 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename ='styles.css') }}">
+</head>
+<body>
+<div class="pagebox">
+	<div class="header">
+		{%if 'username' not in session %}
+		<a href='/login' class="menulink">Click Here to Login </a>
+		{% else %}
+		<a href='/gdisconnect' class="menulink">Logout </a>
+		{% endif %}
+		<h1 class="title">Edit Item</h1>
+	</div>
+	<form action= '{{url_for('editCategoryItem', category_id = category_id, categoryitem_id = item.id)}}' method = 'POST'>
+	<h1 class="names">Name:</h1>
+	<p class="primary">
+		<input type = 'text' class="input-width" name = 'name' placeholder = '{{item.name}}'>
+	</p>
+	<h1 class="names">Description:</h1>
+	<p class="primary">
+		<input type = 'text' class="input-width" name = 'description' placeholder = '{{item.description}}'>
+	</p>
+	<input type='submit' value='Add'>
+	</form>
+	<a href= '{{url_for('categoryItems', category_id= item.category_id)}}'>Cancel</a>
+</div>
+</body>
+</html>

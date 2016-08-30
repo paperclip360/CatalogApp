@@ -1,0 +1,28 @@
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename ='styles.css') }}">
+</head>
+<body>
+<div class="pagebox">
+	<div class="header">
+		{%if 'username' not in session %}
+		<a href='/login' class="menulink">Click Here to Login </a>
+		{% else %}
+		<a href='/gdisconnect' class="menulink">Logout </a>
+		{% endif %}
+		<h1 class="title">New Item</h1>
+	</div>
+	<form action='{{url_for('newCategoryItem', category_id=category_id )}}' method = 'POST'>
+	<h1 class="names">Name:</h1>
+  <p class="primary">
+		<input type='text' maxlength = '50' class='input-width' name='name' autofocus='name'>
+	</p>
+	<h1 class="names">Description:</h1>
+	<p class="primary">
+		<input type='text' maxlength = '250' class='input-width' name='description'>
+	</p>
+	<input type='submit' value='Add'>
+	</form>
+  </br>
+  <a href= '{{url_for('categoryItems', category_id= category_id)}}'>Cancel</a>
+</div>
+</body>	
+</html>
